@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSRLearning - Beginner Web Development Bootcamp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="styles/styles.css
+    "
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-blue": "#1E40AF",
+              "brand-light": "#3B82F6",
+              "brand-dark": "#1E3A8A",
+              "accent-orange": "#F59E0B",
+              "accent-green": "#10B981",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <h1 class="text-2xl font-bold text-brand-blue">TSRLearning</h1>
+          </div>
+          <div class="hidden md:flex items-baseline space-x-8">
+            <a href="#home" class="nav-link text-gray-700 hover:text-brand-blue"
+              >Home</a
+            >
+            <a
+              href="#courses"
+              class="nav-link text-gray-700 hover:text-brand-blue"
+              >Courses</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-gray-700 hover:text-brand-blue"
+              >About</a
+            >
+            <a
+              href="#testimonials"
+              class="nav-link text-gray-700 hover:text-brand-blue"
+              >Reviews</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-700 hover:text-brand-blue"
+              >Contact</a
+            >
+            <a
+              href="#apply"
+              class="bg-brand-blue text-white px-6 py-2 rounded-full hover:bg-brand-dark transition-all transform hover:scale-105"
+              >Apply Now</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-700 hover:text-brand-blue"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-gray-700 hover:text-brand-blue"
+            >Home</a
+          >
+          <a
+            href="#courses"
+            class="block px-3 py-2 text-gray-700 hover:text-brand-blue"
+            >Courses</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-gray-700 hover:text-brand-blue"
+            >About</a
+          >
+          <a
+            href="#testimonials"
+            class="block px-3 py-2 text-gray-700 hover:text-brand-blue"
+            >Reviews</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-gray-700 hover:text-brand-blue"
+            >Contact</a
+          >
+          <a
+            href="#apply"
+            class="block mx-3 mt-4 bg-brand-blue text-white px-4 py-2 rounded-full text-center"
+            >Apply Now</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-16 bg-gradient-to-br from-brand-blue via-brand-light to-purple-600 text-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8 fade-in">
+            <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+              Learn Web Development
+              <span class="text-accent-orange">For Complete Beginners</span>
+            </h1>
+            <p class="text-xl text-blue-100 leading-relaxed">
+              Start your coding journey with zero experience required! TSR
+              Learning's beginner-friendly bootcamp teaches you HTML, CSS,
+              JavaScript, and Tailwind CSS through hands-on projects and
+              personalized support.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#apply"
+                class="bg-accent-orange text-white px-8 py-4 rounded-full font-semibold hover:bg-yellow-500 transition-all transform hover:scale-105 text-center"
+              >
+                Start Your Journey
+              </a>
+              <a
+                href="#courses"
+                class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-blue transition-all text-center"
+              >
+                View Curriculum
+              </a>
+            </div>
+            <div class="flex items-center space-x-8 pt-8">
+              <div class="text-center">
+                <div class="text-3xl font-bold">100%</div>
+                <div class="text-blue-200">Beginner Friendly</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold">12 Weeks</div>
+                <div class="text-blue-200">Step-by-Step</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold">1:8</div>
+                <div class="text-blue-200">Teacher Ratio</div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 float-animation"
+            >
+              <div class="text-sm text-blue-200 mb-4">
+                // Your coding journey starts here
+              </div>
+              <div class="space-y-2 font-mono text-sm">
+                <div>
+                  <span class="text-accent-orange">// Week 1:</span>
+                  <span class="text-white">HTML Basics</span>
+                </div>
+                <div>
+                  <span class="text-accent-orange">// Week 4:</span>
+                  <span class="text-white">CSS Styling</span>
+                </div>
+                <div>
+                  <span class="text-accent-orange">// Week 8:</span>
+                  <span class="text-white">JavaScript Magic</span>
+                </div>
+                <div>
+                  <span class="text-accent-orange">// Week 12:</span>
+                  <span class="text-white">Your First Website!</span>
+                </div>
+                <div class="pt-4">
+                  <span class="text-accent-green">console.log</span>(<span
+                    class="text-accent-green"
+                    >'Welcome future developer!'</span
+                  >);
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Beginner-Friendly Curriculum
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Learn step-by-step with our carefully designed curriculum. No prior
+            experience needed - we start from the very basics!
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="course-card bg-white rounded-xl p-8 shadow-lg flex flex-col h-full"
+          >
+            <div
+              class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fab fa-html5 text-3xl text-orange-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">HTML5 Basics</h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Start with the building blocks of the web. Learn to create webpage
+              structure from scratch and understand how websites work.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>✓ What is HTML?</li>
+              <li>✓ Creating Your First Page</li>
+              <li>✓ Text, Images & Links</li>
+              <li>✓ Simple Forms</li>
+            </ul>
+          </div>
+
+          <div
+            class="course-card bg-white rounded-xl p-8 shadow-lg flex flex-col h-full"
+          >
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fab fa-css3-alt text-3xl text-blue-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">CSS3 Styling</h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Make your websites beautiful! Learn to add colors, layouts, and
+              animations to create professional-looking designs.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>✓ Colors & Fonts</li>
+              <li>✓ Layouts & Positioning</li>
+              <li>✓ Responsive Design</li>
+              <li>✓ Simple Animations</li>
+            </ul>
+          </div>
+
+          <div
+            class="course-card bg-white rounded-xl p-8 shadow-lg flex flex-col h-full"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fab fa-js-square text-3xl text-yellow-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              JavaScript Fundamentals
+            </h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Add interactivity to your websites. Learn programming step-by-step
+              with real examples and build dynamic features.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>✓ Variables & Functions</li>
+              <li>✓ Click Events & Animations</li>
+              <li>✓ Form Validation</li>
+              <li>✓ Simple Games</li>
+            </ul>
+          </div>
+
+          <div
+            class="course-card bg-white rounded-xl p-8 shadow-lg flex flex-col h-full"
+          >
+            <div
+              class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-wind text-3xl text-cyan-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Tailwind CSS</h3>
+            <p class="text-gray-600 mb-6 flex-grow">
+              Bonus skill! Learn modern CSS framework to build websites faster
+              and easier with utility-first approach.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>✓ Quick Styling</li>
+              <li>✓ Responsive Layouts</li>
+              <li>✓ Beautiful Components</li>
+              <li>✓ Professional Look</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                12 Weeks, Step-by-Step
+              </h3>
+              <div class="space-y-4">
+                <!-- Week 1-3: HTML Foundations -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onclick="toggleWeek('week1-3')"
+                    class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <div
+                        class="bg-brand-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm"
+                      >
+                        1
+                      </div>
+                      <div>
+                        <h4 class="font-semibold text-gray-900">
+                          Weeks 1-3: HTML Foundations
+                        </h4>
+                        <p class="text-gray-600 text-sm">
+                          Learn the building blocks of web development from
+                          absolute zero
+                        </p>
+                      </div>
+                    </div>
+                    <i
+                      id="chevron-week1-3"
+                      class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"
+                    ></i>
+                  </button>
+                  <div id="week1-3" class="hidden bg-gray-50 p-4">
+                    <div class="ml-12 space-y-3">
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 1: What is a Website?
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• How the internet works (simplified)</li>
+                          <li>• What is HTML and why do we need it?</li>
+                          <li>• Setting up your coding environment</li>
+                          <li>• Your first "Hello World" webpage</li>
+                          <li>• Understanding file structure and folders</li>
+                        </ul>
+                      </div>
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 2: Text and Structure
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Headings and paragraphs</li>
+                          <li>• Bold, italic, and text formatting</li>
+                          <li>• Creating lists (numbered and bullet points)</li>
+                          <li>• Adding line breaks and spacing</li>
+                          <li>• Comments in HTML code</li>
+                        </ul>
+                      </div>
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 3: Links and Images
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Adding images to your webpage</li>
+                          <li>• Creating links to other pages</li>
+                          <li>• Email links and phone links</li>
+                          <li>• Making a simple navigation menu</li>
+                          <li>
+                            • Project: Build your first personal "About Me" page
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Week 4-6: CSS Styling -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onclick="toggleWeek('week4-6')"
+                    class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <div
+                        class="bg-brand-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm"
+                      >
+                        2
+                      </div>
+                      <div>
+                        <h4 class="font-semibold text-gray-900">
+                          Weeks 4-6: CSS Styling
+                        </h4>
+                        <p class="text-gray-600 text-sm">
+                          Transform your plain HTML into beautiful, professional
+                          websites
+                        </p>
+                      </div>
+                    </div>
+                    <i
+                      id="chevron-week4-6"
+                      class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"
+                    ></i>
+                  </button>
+                  <div id="week4-6" class="hidden bg-gray-50 p-4">
+                    <div class="ml-12 space-y-3">
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 4: Introduction to CSS
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• What is CSS and how does it work?</li>
+                          <li>• Connecting CSS to your HTML</li>
+                          <li>• Changing colors and backgrounds</li>
+                          <li>• Font families, sizes, and text styling</li>
+                          <li>• Making your first styled webpage</li>
+                        </ul>
+                      </div>
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 5: Layout and Positioning
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Understanding the box model</li>
+                          <li>• Padding, margins, and borders</li>
+                          <li>• CSS Flexbox for easy layouts</li>
+                          <li>• Centering content and alignment</li>
+                          <li>• Creating columns and rows</li>
+                        </ul>
+                      </div>
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 6: Responsive Design
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Making websites work on phones and tablets</li>
+                          <li>• CSS media queries (mobile-first approach)</li>
+                          <li>• Flexible images and text</li>
+                          <li>• Testing on different screen sizes</li>
+                          <li>
+                            • Project: Create a responsive business card website
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Week 7-9: JavaScript Basics -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onclick="toggleWeek('week7-9')"
+                    class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <div
+                        class="bg-brand-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm"
+                      >
+                        3
+                      </div>
+                      <div>
+                        <h4 class="font-semibold text-gray-900">
+                          Weeks 7-9: JavaScript Basics
+                        </h4>
+                        <p class="text-gray-600 text-sm">
+                          Add interactivity and make your websites come alive
+                        </p>
+                      </div>
+                    </div>
+                    <i
+                      id="chevron-week7-9"
+                      class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"
+                    ></i>
+                  </button>
+                  <div id="week7-9" class="hidden bg-gray-50 p-4">
+                    <div class="ml-12 space-y-3">
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 7: Programming Fundamentals
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• What is programming? Think like a computer</li>
+                          <li>• Variables: storing information</li>
+                          <li>• Numbers, text, and true/false values</li>
+                          <li>• Your first JavaScript alert box</li>
+                          <li>• Console.log for testing your code</li>
+                        </ul>
+                      </div>
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 8: Making Things Happen
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Click events: making buttons work</li>
+                          <li>• Changing text and images with JavaScript</li>
+                          <li>• Simple if/else decisions</li>
+                          <li>• Getting user input from forms</li>
+                          <li>• Creating a simple calculator</li>
+                        </ul>
+                      </div>
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 9: Interactive Features
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Form validation (checking user input)</li>
+                          <li>• Show and hide content</li>
+                          <li>• Simple animations and effects</li>
+                          <li>• Image galleries and slideshows</li>
+                          <li>• Project: Build an interactive photo gallery</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Week 10-12: Real-World Projects -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    onclick="toggleWeek('week10-12')"
+                    class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
+                  >
+                    <div class="flex items-center space-x-4">
+                      <div
+                        class="bg-brand-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm"
+                      >
+                        4
+                      </div>
+                      <div>
+                        <h4 class="font-semibold text-gray-900">
+                          Weeks 10-12: Real-World Projects
+                        </h4>
+                        <p class="text-gray-600 text-sm">
+                          Build complete websites and learn professional
+                          techniques
+                        </p>
+                      </div>
+                    </div>
+                    <i
+                      id="chevron-week10-12"
+                      class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"
+                    ></i>
+                  </button>
+                  <div id="week10-12" class="hidden bg-gray-50 p-4">
+                    <div class="ml-12 space-y-3">
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 10: Tailwind CSS Bonus
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Introduction to utility-first CSS</li>
+                          <li>• Quick styling with Tailwind classes</li>
+                          <li>• Building components faster</li>
+                          <li>• Responsive design made easy</li>
+                          <li>
+                            • Converting your previous projects to Tailwind
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 11: Portfolio Website
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Planning your personal website</li>
+                          <li>• Professional design principles</li>
+                          <li>• Showcasing your projects</li>
+                          <li>• Contact forms and social links</li>
+                          <li>• Making it mobile-friendly</li>
+                        </ul>
+                      </div>
+                      <div class="bg-white p-3 rounded-lg">
+                        <h5 class="font-semibold text-gray-900 mb-2">
+                          Week 12: Launch Your Website
+                        </h5>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li>• Choosing a domain name</li>
+                          <li>
+                            • Free hosting options (GitHub Pages, Netlify)
+                          </li>
+                          <li>• Publishing your website online</li>
+                          <li>• Basic SEO for beginners</li>
+                          <li>• Final presentations and celebration!</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-gradient-to-br from-brand-blue to-purple-600 rounded-xl p-8 text-white"
+            >
+              <h4 class="text-2xl font-bold mb-6">What You'll Build</h4>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-check-circle text-accent-green"></i>
+                  <span>Personal Portfolio Website</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-check-circle text-accent-green"></i>
+                  <span>Recipe or Blog Website</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-check-circle text-accent-green"></i>
+                  <span>Simple Calculator App</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-check-circle text-accent-green"></i>
+                  <span>Interactive Quiz Game</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-check-circle text-accent-green"></i>
+                  <span>Business Landing Page</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">
+              Perfect for Complete Beginners
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+              Never written a line of code? Perfect! Our bootcamp is designed
+              specifically for people starting their coding journey from
+              scratch.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="bg-brand-blue text-white rounded-full w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-heart"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">
+                    Zero Experience Required
+                  </h3>
+                  <p class="text-gray-600">
+                    We start with "What is a website?" and build up from there.
+                    No assumptions made!
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div
+                  class="bg-brand-blue text-white rounded-full w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">
+                    Learn at Your Pace
+                  </h3>
+                  <p class="text-gray-600">
+                    No rushing, no pressure. We repeat concepts until everyone
+                    understands.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div
+                  class="bg-brand-blue text-white rounded-full w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-hands-helping"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">
+                    Lifetime Support
+                  </h3>
+                  <p class="text-gray-600">
+                    Questions after graduation? We're here to help! Join our
+                    alumni community.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="bg-gradient-to-br from-brand-blue to-purple-600 rounded-2xl p-8 text-white"
+            >
+              <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <h4 class="text-2xl font-bold mb-6">Meet Our Students</h4>
+                <div class="space-y-4">
+                  <div
+                    class="bg-white/10 rounded-lg p-4 flex items-center space-x-4"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=80&h=80&fit=crop&crop=face&auto=format"
+                      alt="Maria"
+                      class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <div class="text-accent-orange font-bold">Maria, 34</div>
+                      <div class="text-sm">Stay-at-home mom</div>
+                      <div class="text-sm text-blue-200">
+                        "Now building websites for local businesses!"
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white/10 rounded-lg p-4 flex items-center space-x-4"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=80&h=80&fit=crop&crop=face&auto=format"
+                      alt="James"
+                      class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <div class="text-accent-orange font-bold">James, 28</div>
+                      <div class="text-sm">Retail manager</div>
+                      <div class="text-sm text-blue-200">
+                        "Changed careers to web development!"
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white/10 rounded-lg p-4 flex items-center space-x-4"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face&auto=format"
+                      alt="Lisa"
+                      class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <div class="text-accent-orange font-bold">Lisa, 45</div>
+                      <div class="text-sm">Teacher</div>
+                      <div class="text-sm text-blue-200">
+                        "Created my school's new website!"
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            What Our Beginner Students Say
+          </h2>
+          <p class="text-xl text-gray-600">
+            Real stories from people who started with zero coding experience
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg flex flex-col h-full">
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=80&h=80&fit=crop&crop=face&auto=format"
+                alt="Keisha Thompson"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <div class="font-semibold text-gray-900">Keisha Thompson</div>
+                <div class="text-sm text-gray-600">
+                  Complete Beginner → Freelance Web Designer
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 flex-grow">
+              "I was terrified of computers before this course! The instructors
+              were so patient and explained everything in simple terms. Now I'm
+              building websites for small businesses and loving every minute of
+              it!"
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg flex flex-col h-full">
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face&auto=format"
+                alt="Mike Rodriguez"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <div class="font-semibold text-gray-900">Mike Rodriguez</div>
+                <div class="text-sm text-gray-600">
+                  Construction Worker → Junior Developer
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 flex-grow">
+              "At 42, I thought it was too late to learn coding. TSRLearning
+              proved me wrong! The step-by-step approach made everything click.
+              Best decision I ever made for my career!"
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg flex flex-col h-full">
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop&crop=face&auto=format"
+                alt="Amanda Foster"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <div class="font-semibold text-gray-900">Amanda Foster</div>
+                <div class="text-sm text-gray-600">
+                  No Tech Background → Created Her Own Website
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 flex-grow">
+              "I saved thousands by learning to build my own website! The course
+              was easy to follow and the support was amazing. I actually enjoy
+              coding now and recommend it to everyone!"
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact/Apply Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Ready to Start Your Coding Journey?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Join our next beginner-friendly cohort and change your life in 12
+            weeks!
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+              Course Information
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-brand-blue text-white rounded-full w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-calendar"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">
+                    Next Beginner Cohort
+                  </div>
+                  <div class="text-gray-600">Starting July 5, 2025</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-brand-blue text-white rounded-full w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">Schedule</div>
+                  <div class="text-gray-600">
+                    Saturdays 1 PM - 3 PM CST (2 hours)
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-brand-blue text-white rounded-full w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-users"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">Class Size</div>
+                  <div class="text-gray-600">
+                    Maximum 10 students for personalized attention
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-brand-blue text-white rounded-full w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">Investment</div>
+                  <div class="text-gray-600">$499 (Save $125 - 20% off!)</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div
+                  class="bg-brand-blue text-white rounded-full w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-900">Questions?</div>
+                  <div class="text-gray-600">lbenagha@gmail.com</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mt-8 p-6 bg-gradient-to-r from-brand-blue to-purple-600 rounded-xl text-white"
+            >
+              <h4 class="text-xl font-bold mb-4">
+                20% OFF Early Bird Special!
+              </h4>
+              <p class="mb-4">
+                Apply before June 30th and save $100! Perfect for beginners
+                ready to start.
+              </p>
+              <div class="text-2xl font-bold">
+                $499 <span class="text-lg line-through opacity-75">$624</span>
+              </div>
+              <div class="text-sm mt-2">
+                ✓ No experience required ✓ Small class sizes ✓ One-time payment
+              </div>
+            </div>
+          </div>
+
+          <div id="apply">
+            <form
+              id="application-form"
+              class="bg-gray-50 rounded-2xl p-8"
+              action="https://formspree.io/f/xblyrkel"
+              method="POST"
+            >
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                Apply for Beginner Bootcamp
+              </h3>
+              <div class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      for="firstName"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >First Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="lastName"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Last Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="experience"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Current Tech Experience</label
+                  >
+                  <select
+                    id="experience"
+                    name="experience"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  >
+                    <option value="">Select your level</option>
+                    <option value="complete-beginner">
+                      Complete Beginner (Perfect for us!)
+                    </option>
+                    <option value="basic-computer">
+                      Basic Computer Skills
+                    </option>
+                    <option value="some-html">Tried HTML Before</option>
+                    <option value="other">
+                      Other (please specify in goals)
+                    </option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="schedule"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Preferred Schedule *</label
+                  >
+                  <select
+                    id="schedule"
+                    name="schedule"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  >
+                    <option value="">Select preferred schedule</option>
+                    <option value="saturday-morning">
+                      Saturdays 10 AM-12 PM CST
+                    </option>
+                    <option value="saturday-afternoon">
+                      Saturdays 2 PM-4 PM CST (if available)
+                    </option>
+                    <option value="flexible">
+                      I'm flexible with Saturday times
+                    </option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="goals"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Why do you want to learn web development?</label
+                  >
+                  <textarea
+                    id="goals"
+                    name="goals"
+                    rows="4"
+                    placeholder="Tell us your goals! Career change? Side income? Personal projects? Help us tailor the course to you..."
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  ></textarea>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    name="newsletter"
+                    class="h-4 w-4 text-brand-blue focus:ring-brand-blue border-gray-300 rounded"
+                  />
+                  <label for="newsletter" class="ml-2 text-sm text-gray-700"
+                    >Yes, send me beginner-friendly coding tips and updates
+                    about TSRLearning</label
+                  >
+                </div>
+              </div>
+              <div class="mt-8">
+                <button
+                  type="submit"
+                  class="w-full bg-brand-blue text-white py-4 px-6 rounded-lg font-semibold hover:bg-brand-dark transition-colors transform hover:scale-[1.02]"
+                >
+                  Submit Application
+                </button>
+              </div>
+              <div class="mt-4 text-center text-sm text-gray-600">
+                * Required fields. We'll contact you within 24 hours with next
+                steps.<br />
+                Don't worry about your experience level - we're here to help
+                beginners succeed!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-xl text-gray-600">
+            Common questions from our beginner students
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              Do I really need ZERO experience to join?
+            </h3>
+            <p class="text-gray-600">
+              Absolutely! We designed this course specifically for complete
+              beginners. We start with "What is a website?" and build from
+              there. Many of our most successful students had never written a
+              line of code before joining us.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              What if I'm not "good with computers"?
+            </h3>
+            <p class="text-gray-600">
+              Perfect! Many of our students felt the same way. If you can use
+              email and browse the internet, you have all the computer skills
+              needed to start. We'll teach you everything else step by step.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              Am I too old to learn programming?
+            </h3>
+            <p class="text-gray-600">
+              Never! Our oldest successful graduate was 67. Programming is a
+              skill like any other - with patience and practice, anyone can
+              learn. We've had students from 18 to 67 succeed in our program.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              What equipment do I need?
+            </h3>
+            <p class="text-gray-600">
+              Just a computer (Windows, Mac, or Chromebook) and internet
+              connection. We'll help you set up all the free software you need
+              in the first class. No expensive equipment required!
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              What if I fall behind or don't understand something?
+            </h3>
+            <p class="text-gray-600">
+              No one gets left behind! With only 8 students per class, we give
+              personal attention to everyone. We also offer free review sessions
+              and one-on-one help when needed. We repeat concepts until everyone
+              gets it.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+              Can I really get a job after 12 weeks?
+            </h3>
+            <p class="text-gray-600">
+              While we can't guarantee job placement, many of our graduates have
+              found work, started freelancing, or built their own websites. We
+              focus on practical skills and help you build a portfolio that
+              showcases your abilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="col-span-2">
+            <h3 class="text-2xl font-bold mb-4">TSRLearning</h3>
+            <p class="text-gray-400 mb-6 max-w-md">
+              Empowering complete beginners to start their coding journey with
+              confidence. No experience required - just curiosity and
+              determination!
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://facebook.com/tsrlearningllc"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-facebook-f text-xl"></i>
+              </a>
+              <a
+                href="https://linkedin.com/company/tsrlearning"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <a
+                href="https://instagram.com/tsrlearning"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#courses"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Beginner Curriculum</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Why Choose Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Success Stories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#apply"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Apply Now</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Support</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Beginner FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About TSRLearning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:lbenagha@gmail.com"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2025 TSRLearning. All rights reserved. Making coding
+            accessible to everyone, one beginner at a time.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
